@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<title>Portofolio UjianAman — Ahmad Sayuti</title>
+<style>
+@font-face { font-family: Inter; font-weight: 400; src: url({{F400}}) format('truetype'); }
+@font-face { font-family: Inter; font-weight: 500; src: url({{F500}}) format('truetype'); }
+@font-face { font-family: Inter; font-weight: 600; src: url({{F600}}) format('truetype'); }
+@font-face { font-family: Inter; font-weight: 700; src: url({{F700}}) format('truetype'); }
+@font-face { font-family: Inter; font-weight: 800; src: url({{F800}}) format('truetype'); }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+@page { size: A4; margin: 0; }
+html, body { width: 210mm; }
+body {
+  font-family: Inter, "Liberation Sans", Arial, sans-serif;
+  color: #0b1220;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.page {
+  width: 210mm; height: 297mm; overflow: hidden; position: relative;
+  background: #fff; page-break-after: always; padding: 46px 52px;
+  display: flex; flex-direction: column;
+}
+.page:last-child { page-break-after: auto; }
+
+/* ---------- cover ---------- */
+.cover { padding: 0; background: #070b14; color: #fff; display: block; }
+.cover .glow-a { position: absolute; width: 560px; height: 560px; border-radius: 50%; background: #4f46e5; filter: blur(110px); opacity: .5; top: -240px; left: -140px; }
+.cover .glow-b { position: absolute; width: 460px; height: 460px; border-radius: 50%; background: #0ea5e9; filter: blur(120px); opacity: .3; bottom: -220px; right: -80px; }
+.cover .lines { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 58px 58px; mask-image: radial-gradient(620px 420px at 30% 38%, #000 30%, transparent 76%); }
+.cover-inner { position: relative; padding: 52px 56px; height: 100%; display: flex; flex-direction: column; }
+.cover-top { display: flex; justify-content: space-between; align-items: center; }
+.brand { display: flex; align-items: center; gap: 11px; font-weight: 800; font-size: 17px; letter-spacing: -.02em; }
+.mark { width: 36px; height: 36px; border-radius: 11px; display: grid; place-items: center; background: linear-gradient(145deg, #6366f1, #4338ca); font-size: 17px; }
+.label { font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; color: #c7d2fe; border: 1px solid rgba(255,255,255,.18); padding: 8px 13px; border-radius: 999px; }
+.cover h1 { font-size: 58px; line-height: .97; letter-spacing: -.045em; margin-top: 34px; }
+.cover h1 span { color: #818cf8; }
+.cover .sub { font-size: 15.5px; line-height: 1.6; color: #a5b4cf; margin-top: 16px; max-width: 52ch; }
+.cover .chips { display: flex; gap: 8px; margin-top: 24px; }
+.cover .chips i { font-style: normal; font-size: 11px; font-weight: 600; color: #b8c4da; border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 6px 11px; }
+.shot { margin-top: auto; }
+.shot-frame { border-radius: 13px; overflow: hidden; border: 1px solid rgba(255,255,255,.16); background: #fff; box-shadow: 0 40px 70px -34px rgba(0,0,0,.95); }
+.shot-bar { height: 22px; background: #eef2f9; display: flex; align-items: center; gap: 5px; padding: 0 10px; }
+.shot-bar i { width: 7px; height: 7px; border-radius: 50%; background: #cbd5e6; }
+.shot img { width: 100%; display: block; }
+.cover-foot { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.12); }
+.cover-foot b { font-size: 13px; }
+.cover-foot p { font-size: 10.5px; color: #8695ad; margin-top: 3px; }
+.cover-foot .url { font-size: 11px; color: #a5b4fc; font-weight: 600; }
+
+/* ---------- interior ---------- */
+.head { display: flex; justify-content: space-between; align-items: center; padding-bottom: 14px; border-bottom: 1px solid #e3e8f1; }
+.head .tag { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: #7a879c; font-weight: 700; }
+.head .num { font-size: 10px; color: #9aa6b9; font-weight: 600; }
+h2 { font-size: 27px; letter-spacing: -.03em; margin-top: 26px; }
+.lead { font-size: 12.5px; line-height: 1.65; color: #45536b; margin-top: 8px; }
+
+.meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 22px; }
+.meta div { border: 1px solid #e3e8f1; border-radius: 10px; padding: 11px 12px; background: #fbfcfe; }
+.meta span { display: block; font-size: 8.5px; letter-spacing: .08em; text-transform: uppercase; color: #8b97aa; font-weight: 700; }
+.meta b { display: block; font-size: 11.5px; margin-top: 4px; }
+
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px; }
+.box { border: 1px solid #e3e8f1; border-radius: 12px; padding: 16px; }
+.box h3 { font-size: 12px; letter-spacing: .02em; margin-bottom: 8px; display: flex; align-items: center; gap: 7px; }
+.box h3 i { width: 20px; height: 20px; border-radius: 6px; display: grid; place-items: center; background: #eef0ff; color: #4338ca; font-style: normal; font-size: 10px; }
+.box p { font-size: 10.5px; line-height: 1.6; color: #52617a; }
+.box ul { margin-top: 2px; }
+.box li { font-size: 10.5px; line-height: 1.55; color: #52617a; padding-left: 13px; position: relative; margin-bottom: 3px; }
+.box li::before { content: "•"; position: absolute; left: 2px; color: #4f46e5; font-weight: 700; }
+
+.feats { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 14px; }
+.feat { display: flex; gap: 9px; padding: 10px 11px; border: 1px solid #e8ecf4; border-radius: 9px; }
+.feat i { flex: none; width: 18px; height: 18px; border-radius: 5px; background: #eef0ff; color: #4338ca; display: grid; place-items: center; font-style: normal; font-size: 9px; }
+.feat div b { display: block; font-size: 10px; }
+.feat div span { display: block; font-size: 9px; color: #6b7a91; line-height: 1.45; margin-top: 2px; }
+
+.stackrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+.stackrow span { border: 1px solid #e3e8f1; border-radius: 999px; padding: 5px 10px; font-size: 9.5px; font-weight: 600; color: #3c4a63; background: #fff; }
+
+.shotgrid { display: grid; gap: 12px; margin-top: 16px; }
+.shotitem { border: 1px solid #e3e8f1; border-radius: 11px; overflow: hidden; background: #fff; }
+.shotitem img { width: 100%; height: 230px; object-fit: cover; object-position: top center; display: block; border-bottom: 1px solid #eef1f7; }
+.shotitem p { font-size: 9.5px; color: #5b6b82; padding: 8px 12px; display: flex; justify-content: space-between; }
+.shotitem p b { color: #0b1220; font-size: 9.5px; }
+
+.timeline { margin-top: 18px; border: 1px solid #e3e8f1; border-radius: 12px; overflow: hidden; }
+.tr { display: grid; grid-template-columns: 74px 1fr 128px; border-bottom: 1px solid #eef1f7; }
+.tr:last-child { border-bottom: 0; }
+.tr > div { padding: 10px 12px; font-size: 9.5px; line-height: 1.5; color: #52617a; }
+.tr .phase { font-weight: 700; color: #0b1220; background: #fafbfe; }
+.tr .day { text-align: right; font-weight: 600; color: #4f46e5; background: #fafbfe; }
+
+.price { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+.pricebox { border: 1px solid #dfe3ee; border-radius: 12px; padding: 16px; }
+.pricebox.dark { background: #0b1220; color: #fff; border-color: #0b1220; }
+.pricebox span { font-size: 9px; text-transform: uppercase; letter-spacing: .1em; color: #8b97aa; font-weight: 700; }
+.pricebox strong { display: block; font-size: 24px; letter-spacing: -.03em; margin-top: 5px; }
+.pricebox p { font-size: 9.5px; line-height: 1.55; color: #6b7a91; margin-top: 5px; }
+.pricebox.dark p { color: #a5b4cf; }
+.pricebox ul { margin-top: 8px; }
+.pricebox li { font-size: 9.5px; line-height: 1.55; color: #52617a; padding-left: 12px; position: relative; margin-bottom: 3px; }
+.pricebox li::before { content: "✓"; position: absolute; left: 0; color: #0f9d76; font-weight: 700; }
+.pricebox.dark li { color: #cbd5e6; }
+
+.foot { margin-top: auto; padding-top: 16px; border-top: 1px solid #e3e8f1; display: flex; justify-content: space-between; align-items: center; }
+.foot div { font-size: 9.5px; color: #6b7a91; }
+.foot b { color: #0b1220; }
+.foot .cta { font-size: 10.5px; font-weight: 700; color: #4f46e5; }
+
+.note { margin-top: 12px; font-size: 9px; line-height: 1.55; color: #8b6b2e; background: #fff8ea; border: 1px solid #f2dfb8; border-radius: 9px; padding: 10px 12px; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<section class="page cover">
+  <div class="glow-a"></div><div class="glow-b"></div><div class="lines"></div>
+  <div class="cover-inner">
+    <div class="cover-top">
+      <div class="brand"><span class="mark">U</span> UjianAman</div>
+      <span class="label">Portofolio proyek · 2026</span>
+    </div>
+    <h1>Ujian online yang<br /><span>mengawasi dirinya</span><br />sendiri.</h1>
+    <p class="sub">Aplikasi ujian dan tryout sekolah dengan deteksi kecurangan, penilaian otomatis, dan laporan analisis jawaban yang siap dicetak.</p>
+    <div class="chips"><i>React 19</i><i>TypeScript</i><i>Anti-kecurangan</i><i>Cetak A4 / PDF</i></div>
+
+    <div class="shot">
+      <div class="shot-frame">
+        <div class="shot-bar"><i></i><i></i><i></i></div>
+        <img src="{{IMG_EXAM}}" alt="Layar ujian" />
+      </div>
+    </div>
+
+    <div class="cover-foot">
+      <div>
+        <b>Ahmad Sayuti</b>
+        <p>Mobile &amp; Web Developer</p>
+      </div>
+      <div class="url">asaayuti.github.io/cbt-ujian-online</div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+  <div class="head"><span class="tag">UjianAman · Ringkasan</span><span class="num">02 / 04</span></div>
+  <h2>Ujian yang bisa diawasi tanpa menambah staf.</h2>
+  <p class="lead">Sekolah butuh ujian online yang tidak gampang dicurangi, tapi tetap sederhana dipakai guru. UjianAman menggabungkan pengawasan otomatis, penilaian, dan laporan dalam satu alur — dari bank soal sampai rekap nilai siap cetak.</p>
+
+  <div class="meta">
+    <div><span>Jenis</span><b>Studi kasus produk</b></div>
+    <div><span>Peran</span><b>Full-stack developer</b></div>
+    <div><span>Durasi</span><b>16 hari kerja</b></div>
+    <div><span>Status</span><b>Demo publik</b></div>
+  </div>
+
+  <div class="cols">
+    <div class="box">
+      <h3><i>!</i> Masalah</h3>
+      <p>Ujian online mudah dicurangi: siswa pindah tab, menyalin soal, atau membuka aplikasi lain. Guru juga kesulitan melihat pola jawaban dan membuat laporan tanpa mengolah spreadsheet manual.</p>
+    </div>
+    <div class="box">
+      <h3><i>✓</i> Pendekatan</h3>
+      <p>Pengawasan berlapis di sisi klien (tab, fokus, layar penuh, copy-paste, klik kanan) dengan catatan waktu, lalu penilaian otomatis dan analisis butir soal yang langsung bisa dicetak.</p>
+    </div>
+  </div>
+
+  <div class="feats">
+    <div class="feat"><i>1</i><div><b>Deteksi kecurangan</b><span>5 sinyal, log waktu, auto-submit</span></div></div>
+    <div class="feat"><i>2</i><div><b>Timer tak bisa diakali</b><span>Refresh tidak mengembalikan waktu</span></div></div>
+    <div class="feat"><i>3</i><div><b>Penilaian otomatis</b><span>PG langsung, esai oleh guru</span></div></div>
+    <div class="feat"><i>4</i><div><b>Analisis butir soal</b><span>Kesulitan &amp; distribusi jawaban</span></div></div>
+    <div class="feat"><i>5</i><div><b>Laporan siap cetak</b><span>Tata letak A4 / PDF</span></div></div>
+    <div class="feat"><i>6</i><div><b>Dua peran</b><span>Guru mengelola, siswa mengerjakan</span></div></div>
+  </div>
+
+  <div class="stackrow"><span>React 19</span><span>TypeScript</span><span>Vite</span><span>CSS murni</span><span>localStorage (demo)</span><span>REST + PostgreSQL (produksi)</span></div>
+
+
+  <div style="margin-top:18px;">
+    <h3 style="font-size:12px; margin-bottom:9px;">Sinyal yang dicatat</h3>
+    <div class="stackrow" style="margin-top:0;">
+      <span>Pindah tab / aplikasi</span><span>Jendela kehilangan fokus</span><span>Keluar layar penuh</span><span>Copy / cut / paste</span><span>Klik kanan</span>
+    </div>
+    <p style="font-size:9.5px; color:#6b7a91; margin-top:8px;">Setiap sinyal disimpan dengan waktunya, ditampilkan sebagai peringatan, dan dikirim ke laporan guru. Ujian dikumpulkan otomatis pada 8 pelanggaran.</p>
+  </div>
+
+  <div class="cols" style="margin-top:18px;">
+    <div class="box">
+      <h3><i>◎</i> Cakupan pengawasan</h3>
+      <p>Efektif untuk ujian sekolah di lab komputer maupun perangkat siswa: layar penuh wajib, deteksi perpindahan fokus, dan pembatasan aksi salin-tempel.</p>
+    </div>
+    <div class="box">
+      <h3><i>△</i> Batasan yang jujur</h3>
+      <p>Catatan di sisi browser bisa dimanipulasi perangkat yang sangat paham teknis. Versi produksi memindahkan log ke server; proctoring webcam/AI butuh biaya server dan kebijakan privasi terpisah.</p>
+    </div>
+  </div>
+
+  <div class="note"><b>Transparansi:</b> ini proyek studi kasus dengan demo publik. Data demo tersimpan di browser pengunjung. Versi produksi memakai API + PostgreSQL, autentikasi akun sekolah, dan pencatatan pelanggaran di sisi server.</div>
+
+  <div class="foot">
+    <div><b>Demo live:</b> asaayuti.github.io/cbt-ujian-online</div>
+    <div class="cta">Ahmad Sayuti · github.com/asaayuti</div>
+  </div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page">
+  <div class="head"><span class="tag">UjianAman · Tampilan</span><span class="num">03 / 04</span></div>
+  <h2>Alur guru dan siswa.</h2>
+  <p class="lead">Tiga layar inti: panel guru, layar ujian yang diawasi, dan analisis hasil per butir soal.</p>
+
+  <div class="shotgrid">
+    <div class="shotitem">
+      <img src="{{IMG_DASH}}" alt="Dashboard guru" />
+      <p><b>Panel guru</b><span>Ringkasan kelas, status ujian, dan pelanggaran</span></p>
+    </div>
+    <div class="shotitem">
+      <img src="{{IMG_EXAM}}" alt="Layar ujian" />
+      <p><b>Layar ujian siswa</b><span>Timer, navigasi soal, peringatan pelanggaran</span></p>
+    </div>
+    <div class="shotitem">
+      <img src="{{IMG_ANALYSIS}}" alt="Analisis hasil" />
+      <p><b>Analisis &amp; lembar jawaban</b><span>Capaian per soal dan penilaian esai</span></p>
+    </div>
+  </div>
+
+</section>
+
+<!-- PAGE 4 -->
+<section class="page">
+  <div class="head"><span class="tag">UjianAman · Rencana kerja</span><span class="num">04 / 04</span></div>
+  <h2>Rencana 16 hari &amp; lingkup kerja.</h2>
+  <p class="lead">Tahapan yang bisa dipantau, dengan hasil di setiap akhir fase.</p>
+
+  <div class="timeline">
+    <div class="tr"><div class="phase">Hari 1–3</div><div>Fondasi: setup proyek, skema database, autentikasi guru/siswa, kerangka bank soal.</div><div class="day">Fondasi siap</div></div>
+    <div class="tr"><div class="phase">Hari 4–9</div><div>Inti ujian: paket soal, jadwal, timer, acak soal, modul anti-kecurangan, log pelanggaran.</div><div class="day">Ujian bisa dipakai</div></div>
+    <div class="tr"><div class="phase">Hari 10–13</div><div>Penilaian otomatis, penilaian esai, analisis butir soal, laporan cetak A4/PDF.</div><div class="day">Laporan jadi</div></div>
+    <div class="tr"><div class="phase">Hari 14–16</div><div>Testing lintas perangkat, perbaikan, deploy ke hosting/domain, panduan penggunaan.</div><div class="day">Serah terima</div></div>
+  </div>
+
+  <div class="price">
+    <div class="pricebox dark">
+      <span>Paket MVP</span>
+      <strong>Rp1.000.000</strong>
+      <p>Termasuk development, deploy, panduan, dan 2× revisi minor.</p>
+      <ul>
+        <li>1 paket ujian + bank soal</li>
+        <li>Anti-kecurangan level browser</li>
+        <li>Analisis &amp; laporan cetak</li>
+        <li>Garansi bug 14 hari</li>
+      </ul>
+    </div>
+    <div class="pricebox">
+      <span>Bisa ditambahkan</span>
+      <strong style="font-size:15px; letter-spacing:-.01em;">Terpisah</strong>
+      <p>Fitur di luar MVP dihitung terpisah agar harga tetap jujur.</p>
+      <ul>
+        <li>Proctoring webcam / AI</li>
+        <li>Integrasi Dapodik / SSO sekolah</li>
+        <li>Aplikasi mobile native</li>
+        <li>Multi-sekolah / multi-tenant</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cols" style="margin-top:14px;">
+    <div class="box">
+      <h3><i>+</i> Yang dikirim</h3>
+      <ul>
+        <li>Aplikasi web siap pakai + akun admin</li>
+        <li>Source code &amp; dokumentasi deploy</li>
+        <li>Panduan singkat untuk guru</li>
+        <li>Laporan analisis contoh</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3><i>?</i> Cara mulai</h3>
+      <p style="margin-bottom:6px;">Coba demonya, lalu kirim kebutuhan spesifik: jumlah siswa, jenis soal, dan alur penilaian. Saya sesuaikan lingkup sebelum order.</p>
+      <p><b>asaayuti.github.io/cbt-ujian-online</b></p>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div><b>Ahmad Sayuti</b> · Mobile &amp; Web Developer · github.com/asaayuti</div>
+    <div class="cta">Terima kasih</div>
+  </div>
+</section>
+
+</body>
+</html>

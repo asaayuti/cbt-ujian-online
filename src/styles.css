@@ -1113,6 +1113,8 @@ table.data tbody tr:hover {
 
   .side,
   .page-head .btn,
+  .page-head h1,
+  .page-head p,
   .no-print,
   .exam-top {
     display: none !important;
